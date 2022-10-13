@@ -24,10 +24,14 @@
         <div class="col-md-6 mx-auto">
             <div class="bg-danger text-danger-50 rounded">
                 @foreach ($errors->all() as $err)
-                <ul>
-                    <li>{{ $err }}</li>
-                </ul>
+                <p>{{ $err }}</p>
                 @endforeach
+            </div>
+        </div>
+        @elseif ($mess = Session::get('empty'))
+        <div class="col-md-4 mx-auto mb-2">
+            <div class="bg-danger text-danger-50 text-center rounded p-1">
+                <p class="pt-2">{{ $mess }}</p>
             </div>
         </div>
         @endif

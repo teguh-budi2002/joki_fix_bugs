@@ -20,17 +20,21 @@
     <br>
     <h1 class="text-center mb-3 mt-5">Tambah Form Permintaan Barang</h1>
     <div class="row">
-      @if ($errors->any())
-      <div class="col-md-6 mx-auto">
-        <div class="bg-danger text-danger-50 rounded">
-                @foreach ($errors->all() as $err)
-                  <ul>
-                      <li>{{ $err }}</li>
-                  </ul>
-                  @endforeach
-              </div>
-          </div>
-      @endif
+    @if ($errors->any())
+    <div class="col-md-4 mx-auto mb-2">
+        <div class="bg-danger text-danger-50 rounded p-1">
+            @foreach ($errors->all() as $err)
+                <p>{{ $err }}</p>
+            @endforeach
+        </div>
+    </div>
+    @elseif ($mess = Session::get('empty'))
+    <div class="col-md-4 mx-auto mb-2">
+        <div class="bg-danger text-danger-50 text-center rounded p-1">
+            <p class="pt-2">{{ $mess }}</p>
+        </div>
+    </div>
+    @endif
     </div>
     <div class="container">
 

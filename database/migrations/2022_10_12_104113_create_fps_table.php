@@ -19,7 +19,7 @@ class CreateFpsTable extends Migration
             $table->foreignId('kf_id')->onDelete('cascade');
             $table->string('no_surat');
             $table->timestamp('tanggal');
-            $table->string('jumlah');
+            $table->integer('jumlah');
             $table->timestamps();
         });
     }

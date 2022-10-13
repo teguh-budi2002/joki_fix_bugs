@@ -44,6 +44,7 @@
                                 <th scope="col">Fungsi</th>
                                 <th scope="col">Tanggal</th>
                                 <th scope="col">Barang</th>
+                                <th scope="col">Satuan</th>
                                 <th scope="col">Jumlah</th>
                                 <th scope="col">Aksi</th>
                               </tr>
@@ -57,8 +58,10 @@
                                 <td>{{ $fps->tanggal }}</td>
                                 @if ($fps->bp !== null)
                                   <td>{{ $fps->bp->nama_barang }}</td>
+                                  <td>{{ $fps->bp->satuan }}</td>
                                 @else
                                   <td>Barang Kosong</td>
+                                  <td>-</td>
                                 @endif
                                 <td>{{ $fps->jumlah }}</td>
                                 <td>

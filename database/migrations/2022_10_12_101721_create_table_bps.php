@@ -18,7 +18,7 @@ class CreateTableBps extends Migration
             $table->string('no');
             $table->string('nama_barang');
             $table->string('satuan');
-            $table->string('stok');
+            $table->integer('stok');
             $table->timestamps();
         });
     }
